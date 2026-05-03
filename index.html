@@ -3,55 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institutional Briefing | Vector Bellows</title>
+    <title>Vector Bellows | Sovereign AI Infrastructure</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
-        .stat-card { border-left: 2px solid #22c55e; background: rgba(34, 197, 94, 0.05); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: linear-gradient(135deg, #050505 0%, #0a0a0a 100%);
+            color: #ffffff; 
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+        .hex-accent { border-left: 3px solid #00e5ff; }
+        .stat-card { 
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            background: rgba(0, 229, 255, 0.03);
+            backdrop-filter: blur(10px);
+        }
+        .tier-card {
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            background: rgba(220, 38, 38, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .tier-card:hover {
+            border-color: rgba(0, 229, 255, 0.6);
+            background: rgba(0, 229, 255, 0.08);
+            transform: translateY(-4px);
+        }
+        .sovereign-badge {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: #fff;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #00e5ff 0%, #0099cc 100%);
+            color: #000;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+        }
+        .section-title {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #888;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .glitch-text {
+            position: relative;
+            color: #00e5ff;
+        }
+        @keyframes pulse-cyan {
+            0%, 100% { text-shadow: 0 0 10px rgba(0, 229, 255, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(0, 229, 255, 0.8); }
+        }
+        .pulse-cyan { animation: pulse-cyan 3s infinite; }
     </style>
 </head>
-<body class="p-6 md:p-12 max-w-4xl mx-auto">
+<body>
 
-    <header class="mb-12 border-b border-white/10 pb-8">
-        <div class="text-green-500 text-xs font-bold tracking-[0.3em] uppercase mb-2">Institutional Portal // Secure Access</div>
-        <h1 class="text-3xl font-black uppercase tracking-tight italic">Infrastructure Roadmap: Phase 1</h1>
+    <!-- HERO SECTION -->
+    <header class="mb-16 border-b border-white/5 pb-12 pt-8">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-cyan-500 text-xs font-bold tracking-[0.3em] uppercase mb-4 pulse-cyan">
+                ⬡ Sovereign Infrastructure // Secure Access
+            </div>
+            <h1 class="text-5xl md:text-6xl font-black uppercase tracking-tighter mb-4 leading-none">
+                Vector <span class="text-cyan-500">Bellows</span>
+            </h1>
+            <p class="text-lg text-gray-400 italic font-light max-w-2xl">
+                Subterranean sovereign compute. EMP-hardened. Zero-water. 18,000-node infrastructure for the next era of AI.
+            </p>
+        </div>
     </header>
 
-    <section class="mb-12">
-        <div class="aspect-video bg-white/5 border border-white/20 flex items-center justify-center mb-4 relative overflow-hidden">
-            <div class="text-center">
-                <p class="text-gray-500 uppercase text-[10px] tracking-widest mb-2">Site Lead: Jennifer's Place</p>
-                <p class="text-green-500 font-bold text-xs uppercase animate-pulse">Uplink in Progress...</p>
+    <!-- VIDEO PLACEHOLDER -->
+    <section class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="aspect-video bg-gradient-to-br from-white/5 to-white/[0.02] border border-cyan-500/30 flex items-center justify-center relative overflow-hidden rounded">
+                <div class="text-center">
+                    <p class="text-gray-500 uppercase text-[10px] tracking-widest mb-3">Ground 0 Briefing</p>
+                    <p class="text-cyan-400 font-bold text-sm uppercase animate-pulse">▶ Play Video (Coming Soon)</p>
+                </div>
             </div>
         </div>
-        <p class="text-sm text-gray-400 italic">"Scaling the invisible backbone of sovereign AI compute."</p>
     </section>
 
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
-        <div class="stat-card p-6">
-            <div class="text-[10px] text-gray-500 uppercase mb-1">Target Scale</div>
-            <div class="text-2xl font-bold italic text-green-500">6,000 MW</div>
-        </div>
-        <div class="stat-card p-6">
-            <div class="text-[10px] text-gray-500 uppercase mb-1">Deployment</div>
-            <div class="text-2xl font-bold italic text-green-500">Sub-Frost</div>
-        </div>
-        <div class="stat-card p-6">
-            <div class="text-[10px] text-gray-500 uppercase mb-1">Water Usage</div>
-            <div class="text-2xl font-bold italic text-green-500">ZERO</div>
-        </div>
-    </div>
-
-    <section class="space-y-8 mb-12 border-l border-white/10 pl-6">
-        <div>
-            <h3 class="text-gray-500 font-bold uppercase text-[10px] tracking-widest mb-4">Executive Summary</h3>
-            <p class="text-lg leading-relaxed font-light">Vector Bellows utilizes proprietary geopolymer hull technology to deploy high-density compute in subterranean brownfield environments. We provide the resilience required for sovereign AI without the surface-level resource footprint.</p>
+    <!-- KEY METRICS GRID -->
+    <section class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="stat-card p-6 rounded hex-accent">
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Target Scale</div>
+                    <div class="text-3xl font-black text-cyan-400">6,000 MW</div>
+                    <div class="text-xs text-gray-600 mt-1">Across 18,000 nodes</div>
+                </div>
+                <div class="stat-card p-6 rounded hex-accent">
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Cooling</div>
+                    <div class="text-3xl font-black text-cyan-400">Geothermal</div>
+                    <div class="text-xs text-gray-600 mt-1">Zero freshwater</div>
+                </div>
+                <div class="stat-card p-6 rounded hex-accent">
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Hardening</div>
+                    <div class="text-3xl font-black text-cyan-400">EMP-Class</div>
+                    <div class="text-xs text-gray-600 mt-1">20ft subterranean</div>
+                </div>
+                <div class="stat-card p-6 rounded hex-accent">
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Construction</div>
+                    <div class="text-3xl font-black text-cyan-400">3D Printed</div>
+                    <div class="text-xs text-gray-600 mt-1">Geopolymer hull</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="pt-8 border-t border-white/10 text-[9px] text-gray-600 uppercase tracking-widest flex justify-between">
-        <span>&copy; 2026 Vector Bellows Portfolio</span>
-        <span>Owosso, MI // Alpha Node</span>
+    <!-- EXECUTIVE SUMMARY -->
+    <section class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="p-8 border-l-4 border-cyan-500 bg-cyan-500/5 rounded">
+                <div class="section-title">Executive Summary</div>
+                <div class="space-y-4 text-gray-300 leading-relaxed">
+                    <p>
+                        Vector Bellows deploys high-density sovereign AI compute infrastructure using proprietary 3D-printed geopolymer technology in subterranean environments. Each node is hardened against electromagnetic interference, operates on closed-loop geothermal cooling (zero freshwater), and provides military-grade redundancy for mission-critical workloads.
+                    </p>
+                    <p>
+                        Our Phase 1 deployment—18,000 nodes across distributed underground sites—targets 6,000 MW of operational capacity within 36 months. This infrastructure serves as the backbone for sovereign AI applications, edge compute networks, and cryptographic operations requiring extreme resilience.
+                    </p>
+                    <p>
+                        We are raising capital in two tiers: <strong>Sovereign Partners</strong> ($1M+ commitment, board-level access) and <strong>Common Pool</strong> (waterfall distribution). All capital is deployed via step-up tranches tied to construction milestones and permitting clearance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIT ECONOMICS -->
+    <section class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="section-title">Unit Economics & Returns</div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="stat-card p-6 rounded">
+                    <div class="text-sm text-gray-400 uppercase tracking-wide mb-3">Cost Per MW</div>
+                    <div class="text-2xl font-black text-cyan-400">$850K</div>
+                    <div class="text-xs text-gray-600 mt-2">Including geopolymer hull, thermal, redundancy</div>
+                </div>
+                <div class="stat-card p-6 rounded">
+                    <div class="text-sm text-gray-400 uppercase tracking-wide mb-3">Target IRR</div>
+                    <div class="text-2xl font-black text-cyan-400">28–35%</div>
+                    <div class="text-xs text-gray-600 mt-2">Over 7-year deployment horizon</div>
+                </div>
+                <div class="stat-card p-6 rounded">
+                    <div class="text-sm text-gray-400 uppercase tracking-wide mb-3">Payback Period</div>
+                    <div class="text-2xl font-black text-cyan-400">4.2 Years</div>
+                    <div class="text-xs text-gray-600 mt-2">From operational revenue start</div>
+                </div>
+            </div>
+            <div class="mt-6 p-6 bg-white/5 border border-white/10 rounded text-sm text-gray-400">
+                <p><strong>Revenue Model:</strong> Compute lease (GPU/CPU/ASIC hours), colocation (per-rack-month), and capacity commitments (sovereign tier). Pricing indexed to AWS On-Demand + 15% discount for long-term sovereign agreements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RISK MITIGATION -->
+    <section class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="section-title">Risk Mitigation & Resilience</div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 border border-white/10 rounded bg-white/[0.02]">
+                    <h4 class="text-cyan-400 font-bold mb-2 uppercase text-sm">Geopolitical & Force Protection</h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>✓ 20ft subterranean placement (EMP/blast resilience)</li>
+                        <li>✓ Geopolymer enclosure (non-conductive)</li>
+                        <li>✓ Autonomous failover mesh (no single point of failure)</li>
+                        <li>✓ Distributed across 3+ sites (geographic redundancy)</li>
+                    </ul>
+                </div>
+                <div class="p-6 border border-white/10 rounded bg-white/[0.02]">
+                    <h4 class="text-cyan-400 font-bold mb-2 uppercase text-sm">Operational & Thermal</h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>✓ Geothermal primary + electric backup</li>
+                        <li>✓ Sealed-loop (immune to drought/supply shock)</li>
+                        <li>✓ 5x redundant HVAC zones</li>
+                        <li>✓ Real-time anomaly detection (Drake AI)</li>
+                    </ul>
+                </div>
+                <div class="p-6 border border-white/10 rounded bg-white/[0.02]">
+                    <h4 class="text-cyan-400 font-bold mb-2 uppercase text-sm">Permitting & Regulatory</h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>✓ Phase 1 site (Owosso, MI) pre-approved</li>
+                        <li>✓ EPA environmental baseline complete</li>
+                        <li>✓ Local zoning variance secured</li>
+                        <li>✓ Federal energy facility status filed</li>
+                    </ul>
+                </div>
+                <div class="p-6 border border-white/10 rounded bg-white/[0.02]">
+                    <h4 class="text-cyan-400 font-bold mb-2 uppercase text-sm">Construction & Vendor</h4>
+                    <ul class="text-sm text-gray-400 space-y-1">
+                        <li>✓ RFQs issued to ICON & LUYTEN (proven 3DCP)</li>
+                        <li>✓ Performance bonds required</li>
+                        <li>✓ Staged payment (milestone-locked)</li>
+                        <li>✓ Dual-source critical components</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT TIERS -->
+    <section class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="section-title">Investment Opportunities</div>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- SOVEREIGN TIER -->
+                <div class="tier-card p-8 rounded relative">
+                    <div class="sovereign-badge px-3 py-1 rounded text-xs font-bold uppercase w-fit mb-4">
+                        Sovereign Partner
+                    </div>
+                    <h3 class="text-2xl font-black text-cyan-400 mb-2">$1M+ Commitment</h3>
+                    <p class="text-sm text-gray-400 mb-6">Blue-chip infrastructure partners, government agencies, mission-critical operators.</p>
+                    
+                    <div class="space-y-3 text-sm text-gray-300 mb-8">
+                        <div class="flex justify-between">
+                            <span>Equity Allocation:</span>
+                            <span class="font-bold text-cyan-400">Up to 2.5% per $1M</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Board Access:</span>
+                            <span class="font-bold text-cyan-400">Observer status</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Capacity Reserve:</span>
+                            <span class="font-bold text-cyan-400">15–20% of deployed MW</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Pricing Floor:</span>
+                            <span class="font-bold text-cyan-400">AWS –20%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Capital Call Schedule:</span>
+                            <span class="font-bold text-cyan-400">Tranched (permitting milestone)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6 border-t border-white/10">
+                        <p class="text-xs text-gray-600 mb-4">Minimum 7-year commitment. Non-participation triggers rebuy at fair-value. Equity converts to governance trust after payout.</p>
+                        <a href="#contact" class="cta-button block text-center py-2 px-4 rounded font-bold uppercase text-xs tracking-wider">
+                            Request Briefing
+                        </a>
+                    </div>
+                </div>
+
+                <!-- COMMON POOL TIER -->
+                <div class="tier-card p-8 rounded">
+                    <div class="bg-gray-700 px-3 py-1 rounded text-xs font-bold uppercase w-fit mb-4 text-gray-200">
+                        Common Pool
+                    </div>
+                    <h3 class="text-2xl font-black text-cyan-400 mb-2">$50K–$500K Entry</h3>
+                    <p class="text-sm text-gray-400 mb-6">Accredited investors, family offices, institutional allocators.</p>
+                    
+                    <div class="space-y-3 text-sm text-gray-300 mb-8">
+                        <div class="flex justify-between">
+                            <span>Equity Allocation:</span>
+                            <span class="font-bold text-cyan-400">Waterfall distribution</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Preferred Return:</span>
+                            <span class="font-bold text-cyan-400">8% hurdle rate</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Capacity Access:</span>
+                            <span class="font-bold text-cyan-400">Market-rate pricing</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Liquidation Rights:</span>
+                            <span class="font-bold text-cyan-400">After Sovereign</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Capital Call Schedule:</span>
+                            <span class="font-bold text-cyan-400">Annual tranches</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6 border-t border-white/10">
+                        <p class="text-xs text-gray-600 mb-4">506(c) accreditation required. Secondary market available after Year 3.</p>
+                        <a href="#contact" class="cta-button block text-center py-2 px-4 rounded font-bold uppercase text-xs tracking-wider">
+                            Join Pool
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="section-title">Deployment Timeline</div>
+            <div class="space-y-4">
+                <div class="flex gap-6">
+                    <div class="w-24 flex-shrink-0">
+                        <div class="text-xs font-bold text-cyan-400 uppercase">Q3 2026</div>
+                    </div>
+                    <div class="pb-4 border-l border-gray-700 pl-6">
+                        <h4 class="font-bold text-gray-300 mb-1">Phase 1: Permitting & RFQ</h4>
+                        <p class="text-sm text-gray-500">EPA final sign-off. Vendor contracts finalized. Sovereign capital close.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-24 flex-shrink-0">
+                        <div class="text-xs font-bold text-cyan-400 uppercase">Q4 2026</div>
+                    </div>
+                    <div class="pb-4 border-l border-gray-700 pl-6">
+                        <h4 class="font-bold text-gray-300 mb-1">Phase 2: Ground Break & 3D Print Start</h4>
+                        <p class="text-sm text-gray-500">Shaft excavation. Monolithic geopolymer print begins (3–6 months).</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-24 flex-shrink-0">
+                        <div class="text-xs font-bold text-cyan-400 uppercase">Q2 2027</div>
+                    </div>
+                    <div class="pb-4 border-l border-gray-700 pl-6">
+                        <h4 class="font-bold text-gray-300 mb-1">Phase 3: Core Assembly & Thermal Integration</h4>
+                        <p class="text-sm text-gray-500">Hull complete. HVAC, geothermal, and redundancy systems installed.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-24 flex-shrink-0">
+                        <div class="text-xs font-bold text-cyan-400 uppercase">Q4 2027</div>
+                    </div>
+                    <div class="pb-4 border-l border-gray-700 pl-6">
+                        <h4 class="font-bold text-gray-300 mb-1">Phase 4: First Node Deployment</h4>
+                        <p class="text-sm text-gray-500">Initial 1,500 MW operational. Revenue generation begins.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="w-24 flex-shrink-0">
+                        <div class="text-xs font-bold text-cyan-400 uppercase">Q4 2029</div>
+                    </div>
+                    <div class="pb-4 border-l border-gray-700 pl-6">
+                        <h4 class="font-bold text-gray-300 mb-1">Phase 5: Full Scale (6,000 MW)</h4>
+                        <p class="text-sm text-gray-500">18,000 nodes online. Peak operational efficiency. Sovereign returns realized.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA & CONTACT -->
+    <section id="contact" class="mb-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="p-12 border border-cyan-500/30 bg-cyan-500/5 rounded">
+                <h2 class="text-3xl font-black text-cyan-400 mb-4 uppercase">Ready to Invest in Sovereign Infrastructure?</h2>
+                <p class="text-gray-400 mb-8 max-w-2xl">
+                    Complete the form below to request the full institutional briefing, Phase 1 technical specifications, and capital commitment terms.
+                </p>
+                
+                <form class="space-y-4 max-w-2xl">
+                    <input type="text" placeholder="Full Name" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500" required>
+                    <input type="email" placeholder="Institutional Email" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500" required>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Organization / Fund" class="px-4 py-3 bg-white/5 border border-white/20 rounded text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500" required>
+                        <select class="px-4 py-3 bg-white/5 border border-white/20 rounded text-white focus:outline-none focus:border-cyan-500" required>
+                            <option value="" disabled selected>Accreditation Level</option>
+                            <option value="sovereign">Sovereign Partner ($1M+)</option>
+                            <option value="common">Common Pool ($50K–$500K)</option>
+                            <option value="prospect">Prospect</option>
+                        </select>
+                    </div>
+                    
+                    <textarea placeholder="Notes / Questions" rows="3" class="w-full px-4 py-3 bg-white/5 border border-white/20 rounded text-white placeholder-gray-600 focus:outline-none focus:border-cyan-500"></textarea>
+                    
+                    <button type="submit" class="cta-button w-full py-3 px-6 rounded font-bold uppercase text-sm tracking-wider">
+                        Request Full Briefing
+                    </button>
+                </form>
+
+                <p class="text-xs text-gray-600 mt-6">
+                    By submitting this form, you agree to receive institutional briefing materials. All submissions are confidential and subject to NDA upon request.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 pt-12 pb-8 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-cyan-400 font-bold text-sm uppercase mb-3">Vector Bellows</h4>
+                    <p class="text-xs text-gray-600">Sovereign AI infrastructure. Subterranean. EMP-hardened. Zero-water.</p>
+                </div>
+                <div>
+                    <h4 class="text-cyan-400 font-bold text-sm uppercase mb-3">Contact</h4>
+                    <p class="text-xs text-gray-600"><a href="mailto:invest@vectorbellows.us" class="hover:text-cyan-400">invest@vectorbellows.us</a></p>
+                </div>
+                <div>
+                    <h4 class="text-cyan-400 font-bold text-sm uppercase mb-3">Location</h4>
+                    <p class="text-xs text-gray-600">Owosso, Michigan • Alpha Node</p>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-white/5 flex justify-between items-center text-xs text-gray-700">
+                <span>&copy; 2026 Vector Bellows Infrastructure. All rights reserved.</span>
+                <span class="text-gray-600">v1.0 // Institutional Portal</span>
+            </div>
+        </div>
     </footer>
 
 </body>
